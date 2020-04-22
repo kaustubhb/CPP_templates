@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "compilerPath": "/usr/local/Cellar/llvm/10.0.0_1/bin/clang",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/Cellar/llvm/10.0.0_1/include/c++/v1/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": ["/System/Library/Frameworks"],
+    
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

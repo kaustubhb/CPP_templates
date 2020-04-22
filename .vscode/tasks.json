@@ -1,0 +1,37 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558 
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build with Clang",
+      "command": "/usr/local/Cellar/llvm/10.0.0_1/bin/clang++",
+      "args": [
+        "-v",
+        "-std=c++2a",
+        "-stdlib=libc++",
+        "-g",
+        "${relativeDirName}/${file}",
+        "-o",
+        "out/${relativeDirName}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Clang generate AST",
+      "command": "/usr/local/Cellar/llvm/10.0.0_1/bin/clang++",
+      "args": [
+        "-Xclang",
+        "-ast-print",
+        "-fsyntax-only",
+        "${file}"
+      ],
+      "group": "build"
+    }
+  ]
+}
